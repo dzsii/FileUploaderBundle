@@ -15,5 +15,11 @@
         <service class="Thinkbig\Bundle\FileUploaderBundle\EventListener\UploadListener">
              <tag name="kernel.event_listener" event="oneup_uploader.post_persist" method="onUpload" />
         </service>
+
+        <service id="fileuploader.twig_extension"
+            class="Thinkbig\Bundle\FileUploaderBundle\Twig\FileUploaderExtension"
+            public="false">
+            <tag name="twig.extension" />
+        </service>
     </services>
 </container>
