@@ -1,0 +1,37 @@
+{% use "bootstrap_4_layout.html.twig" %}
+{% block file_collection_widget %}
+    {% spaceless %}
+   
+        {{ block('collection_widget') }}
+        <div id='{{ form.vars.id }}_zone' class="dropzone">
+
+            <div class="dropzone-previews">
+            	<div class="dropzone-plus"><i class="glyphicon glyphicon-plus"></i></div>
+            </div>
+            <div class="dz-message"></div>
+
+        </div>
+
+    {% endspaceless %}
+{% endblock %}
+
+{% block uploaded_file_widget %}
+    {% spaceless %}
+
+        <div class="dropzone_uploader">
+
+            <div id='{{ form.vars.id }}_zone' class="dropzone">
+
+
+            </div> 
+            <div class="dropzone-previews">
+                <div class="dropzone-plus"><i class="glyphicon glyphicon-plus"></i></div>
+            </div>
+            <div class="dz-message"></div>
+            
+            {{ form_row(form.file) }}
+
+        </div>
+
+    {% endspaceless %}
+{% endblock %}

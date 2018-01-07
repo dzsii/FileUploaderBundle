@@ -1,0 +1,30 @@
+{
+    "name" : "thinkbig/fileuploader-bundle",
+    "description" : "File uploader bundle",
+    "type" : "symfony-bundle",
+    "authors" : [{
+        "name" : "Borbély Gábor",
+        "email" : "gabor@thinkbig.hu"
+    }],
+    "keywords" : [
+        "file uploader"
+    ],
+    "license" : [
+        "MIT"
+    ],
+    "require" : {
+    },
+    "autoload" : {
+        "psr-0" : {
+            "Thinkbig\\Bundle\\FileUploaderBundle" : ""
+        }
+    },
+    "target-dir" : "Thinkbig/Bundle/FileUploaderBundle",
+    "repositories" : [{
+    }],
+    "extra" : {
+    "branch-alias" : {
+            "dev-master" : "some_version-dev"
+        }
+    }
+}

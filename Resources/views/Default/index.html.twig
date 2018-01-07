@@ -1,0 +1,18 @@
+{% extends 'AppBundle::base.html.twig' %}
+
+{% block page %}
+
+	Hello
+
+
+Hello World!
+
+{{ form_start(form) }}
+            {{ form_widget(form.file.file,  { 'attr': {'data-form-endpoint': oneup_uploader_endpoint('documents')}}) }}
+{{ form_end(form) }}
+{% endblock %}
+
+{% block javascripts %}
+
+
+{% endblock %}
