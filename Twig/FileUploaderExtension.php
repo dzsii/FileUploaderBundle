@@ -6,7 +6,7 @@ namespace Thinkbig\Bundle\FileUploaderBundle\Twig;
 use Symfony\Component\Routing\Generator\UrlGeneratorInterface;
 use Symfony\Bundle\FrameworkBundle\Routing\Router;
 
-use Doctrine\ORM\EntityManager;
+use Doctrine\ORM\EntityManagerInterface;
 use League\Flysystem\MountManager;
 use Intervention\Image\ImageManager;
 
@@ -19,7 +19,7 @@ class FileUploaderExtension extends \Twig_Extension
 	private $mountManager;
 	private $router;
 
-	public function __construct(EntityManager $entityManager, Router $router, MountManager $mountManager)
+	public function __construct(EntityManagerInterface $entityManager, Router $router, MountManager $mountManager)
 	{
 
 
