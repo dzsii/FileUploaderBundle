@@ -15,17 +15,16 @@
         <service class="Thinkbig\Bundle\FileUploaderBundle\Form\DataTransformer\FileToIdTransformer"  autowire="true" public="true"/>
         <service id="Thinkbig\Bundle\FileUploaderBundle\Form\Type\UploadedFileType"  autowire="true" public="true">
 
-            <argument type="service" id="Thinkbig\Bundle\FileUploaderBundle\Form\DataTransformer\FileToIdTransformer" />
+            <argument type="service" id="Thinkbig\Bundle\FileUploaderBundle\Form\DataTransformer\FileToIdTransformer" public="true" />
             <argument type="service" id="@oneup_uploader.templating.uploader_helper" />
             <tag name="form.type" />
         </service>
    
-        <service class="Thinkbig\Bundle\FileUploaderBundle\EventListener\UploadListener">
+        <service class="Thinkbig\Bundle\FileUploaderBundle\EventListener\UploadListener" public="true">
              <tag name="kernel.event_listener" event="oneup_uploader.post_persist" method="onUpload" />
         </service>
 
-        <service id="fileuploader.twig_extension"
-            class="Thinkbig\Bundle\FileUploaderBundle\Twig\FileUploaderExtension"
+        <service id="fileuploader.twig_extension" class="Thinkbig\Bundle\FileUploaderBundle\Twig\FileUploaderExtension"
             public="true">
             <tag name="twig.extension" />
         </service>
