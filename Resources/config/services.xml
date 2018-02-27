@@ -12,7 +12,7 @@
 
     	-->
 
-        <service id="fileuploader.fileToIdTransformer" alias="Thinkbig\Bundle\FileUploaderBundle\Form\DataTransformer\FileToIdTransformer" public="true"/>
+        <service class="Thinkbig\Bundle\FileUploaderBundle\Form\DataTransformer\FileToIdTransformer"  autowire="true" public="true"/>
         <service id="Thinkbig\Bundle\FileUploaderBundle\Form\Type\UploadedFileType"  autowire="true" public="true">
             <tag name="form.type" />
         </service>
