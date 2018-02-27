@@ -19,7 +19,7 @@ class FileUploaderExtension extends \Twig_Extension
 	private $mountManager;
 	private $router;
 
-	public function __construct(EntityManagerInterface $entityManager, Router $router, MountManager $mountManager)
+	public function __construct(EntityManagerInterface $entityManager, UrlGeneratorInterface $router, MountManager $mountManager)
 	{
 
 
