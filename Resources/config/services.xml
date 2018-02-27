@@ -11,7 +11,7 @@
         <prototype namespace="Thinkbig\Bundle\FileUploaderBundle\" resource="../../../../../../src/Thinkbig/Bundle/FileUploaderBundle/*" exclude="../../../../../../src/Thinkbig/Bundle/FileUploaderBundle/{Entity,Repository,Tests}" />
 
     	-->
-
+        <service class="Thinkbig\Bundle\FileUploaderBundle\Form\DataTransformer\FileToIdTransformer"></service>
         <service id="Thinkbig\Bundle\FileUploaderBundle\Form\Type\UploadedFileType"  autowire="true" public="true">
             <tag name="form.type" />
         </service>
