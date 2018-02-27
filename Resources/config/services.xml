@@ -14,6 +14,8 @@
 
         <service class="Thinkbig\Bundle\FileUploaderBundle\Form\DataTransformer\FileToIdTransformer"  autowire="true" public="true"/>
         <service id="Thinkbig\Bundle\FileUploaderBundle\Form\Type\UploadedFileType"  autowire="true" public="true">
+
+            <argument type="service" id="Thinkbig\Bundle\FileUploaderBundle\Form\DataTransformer\FileToIdTransformer" />
             <tag name="form.type" />
         </service>
    
