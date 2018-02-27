@@ -26,10 +26,7 @@
 
         <service id="fileuploader.twig_extension"
             class="Thinkbig\Bundle\FileUploaderBundle\Twig\FileUploaderExtension"
-            public="false">
-            <argument type="service" id="Doctrine\ORM\EntityManagerInterface" />
-            <argument type="service" id="Symfony\Component\Routing\Generator\UrlGeneratorInterface" />
-            <argument type="service" id="League\Flysystem\MountManager" />
+            public="true">
             <tag name="twig.extension" />
         </service>
     </services>
