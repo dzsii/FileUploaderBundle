@@ -12,10 +12,8 @@
 
     	-->
 
-        <service id="fileuploader.fileToIdTransformer" alias="Thinkbig\Bundle\FileUploaderBundle\Form\DataTransformer\FileToIdTransformer"/>
+        <service id="fileuploader.fileToIdTransformer" alias="Thinkbig\Bundle\FileUploaderBundle\Form\DataTransformer\FileToIdTransformer" public="true"/>
         <service id="Thinkbig\Bundle\FileUploaderBundle\Form\Type\UploadedFileType"  autowire="true" public="true">
-
-            <argument type="service" id="@fileuploader.fileToIdTransformer" />
             <tag name="form.type" />
         </service>
    
