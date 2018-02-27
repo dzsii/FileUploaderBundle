@@ -13,7 +13,6 @@ use Thinkbig\Bundle\FileUploaderBundle\Entity\File;
 use Thinkbig\Bundle\FileUploaderBundle\Form\DataTransformer\FileToIdTransformer;
 
 
-use Oneup\UploaderBundle\Templating\Helper\UploaderHelper;
 
 class UploadedFileType extends AbstractType
 {
@@ -21,10 +20,9 @@ class UploadedFileType extends AbstractType
     private $transformer;
     private $helper;
 
-    public function __construct(FileToIdTransformer $transformer, UploaderHelper $helper)
+    public function __construct(FileToIdTransformer $transformer)
     {
         $this->transformer  = $transformer;
-        $this->helper       = $helper;
 
     }
 
@@ -37,7 +35,7 @@ class UploadedFileType extends AbstractType
         $builder->add('file', HiddenType::class, [ 
             'attr'              => array(
                 'data-form-type'        => 'file_uploader',
-                'data-form-endpoint'    => $this->helper->endpoint('documents'),
+            //    'data-form-endpoint'    => $this->helper->endpoint('documents'),
                 'data-form-owner'       => null
             )
 
