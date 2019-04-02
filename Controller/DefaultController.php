@@ -102,8 +102,8 @@ class DefaultController extends Controller
         $filesystem         = $this->get('oneup_flysystem.mount_manager')->getFilesystem('local');
 
         if ($filesystem->has($file->getAdapterPath())) {
-
-            $path = $this->get('kernel')->getRootDir() . '/../var/uploads/documents/'.$file->getAdapterPath();
+            
+            $path = $filesystem->getAdapter()->applyPathPrefix($file->getAdapterPath());
 
             return $this->file($path, $file->getOriginalFileName(), $disposition);
 
