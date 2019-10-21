@@ -103,7 +103,9 @@ class DefaultController extends Controller
 
         if ($filesystem->has($file->getAdapterPath())) {
 
-            $path = $this->get('kernel')->getRootDir() . '/../var/uploads/documents/'.$file->getAdapterPath();
+            
+
+            $path = $filesystem->getAdapter()->applyPathPrefix($file->getAdapterPath());
 
             return $this->file($path, $file->getOriginalFileName(), $disposition);
 
